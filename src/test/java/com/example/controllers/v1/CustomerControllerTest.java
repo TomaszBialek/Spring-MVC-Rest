@@ -166,10 +166,10 @@ public class CustomerControllerTest extends AbstractRestControllerTest {
     }
 
     @Test
-    public void testGetByNameNotFound() throws Exception {
+    public void testGetByIdNotFound() throws Exception {
         when(customerService.getCustomerById(anyLong())).thenThrow(ResourceNotFoundException.class);
 
-        mockMvc.perform(MockMvcRequestBuilders.get(CustomerController.BASE_URL + "/Foo")
+        mockMvc.perform(MockMvcRequestBuilders.get(CustomerController.BASE_URL + "Foo")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isNotFound());
     }
