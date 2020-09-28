@@ -1,7 +1,8 @@
 package com.example.controllers.v1;
 
-import com.example.api.v1.model.CustomerDTO;
-import com.example.api.v1.model.CustomerListDTO;
+
+import com.example.model.CustomerDTO;
+import com.example.model.CustomerListDTO;
 import com.example.services.CustomerService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -25,7 +26,9 @@ public class CustomerController {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public CustomerListDTO getListOfCustomers() {
-        return new CustomerListDTO(customerService.getAllCustomers());
+        CustomerListDTO customerListDTO = new CustomerListDTO();
+        customerListDTO.getCustomers().addAll(customerService.getAllCustomers());
+        return customerListDTO;
     }
 
     @GetMapping({"/{id}"})

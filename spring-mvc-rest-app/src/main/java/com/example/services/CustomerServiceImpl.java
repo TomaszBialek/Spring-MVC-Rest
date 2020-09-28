@@ -1,11 +1,10 @@
 package com.example.services;
 
 import com.example.api.v1.mapper.CustomerMapper;
-import com.example.api.v1.model.CustomerDTO;
 import com.example.controllers.v1.CustomerController;
 import com.example.domain.Customer;
+import com.example.model.CustomerDTO;
 import com.example.repositories.CustomerRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -76,11 +75,11 @@ public class CustomerServiceImpl implements CustomerService {
     public CustomerDTO patchCustomer(Long id, CustomerDTO customerDTO) {
         return customerRepository.findById(id).map(customer -> {
 
-            if(customerDTO.getFirstName() != null){
+            if (customerDTO.getFirstName() != null) {
                 customer.setFirstName(customerDTO.getFirstName());
             }
 
-            if(customerDTO.getLastName() != null){
+            if (customerDTO.getLastName() != null) {
                 customer.setLastName(customerDTO.getLastName());
             }
 

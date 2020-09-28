@@ -1,7 +1,8 @@
 package com.example.api.v1.mapper;
 
-import com.example.api.v1.model.CustomerDTO;
+
 import com.example.domain.Customer;
+import com.example.model.CustomerDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

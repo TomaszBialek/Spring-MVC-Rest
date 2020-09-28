@@ -1,6 +1,6 @@
 package com.example.services;
 
-import com.example.api.v1.model.CustomerDTO;
+import com.example.model.CustomerDTO;
 
 import java.util.List;
 

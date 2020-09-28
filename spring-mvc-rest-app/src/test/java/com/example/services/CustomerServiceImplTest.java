@@ -1,8 +1,8 @@
 package com.example.services;
 
 import com.example.api.v1.mapper.CustomerMapper;
-import com.example.api.v1.model.CustomerDTO;
 import com.example.domain.Customer;
+import com.example.model.CustomerDTO;
 import com.example.repositories.CustomerRepository;
 import org.junit.Before;
 import org.junit.Test;
